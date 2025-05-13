@@ -2,31 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 0%; /* black */
+    --foreground: 0 0% 100%; /* white */
+    --muted: 0 0% 20%; /* dark gray */
+    --accent: 0 0% 40%; /* medium gray */
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --muted: 0 0% 20%;
+    --accent: 0 0% 40%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  body {
+    @apply antialiased bg-black text-white;
+  }
 }
 
 @layer utilities {
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
