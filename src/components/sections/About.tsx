@@ -6,7 +6,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              I'm a full-stack developer with a passion for creating elegant solutions
+              I&apos;m a full-stack developer with a passion for creating elegant solutions
               to complex problems. With expertise in modern web technologies, I
               specialize in building responsive and user-friendly applications.
             </p>
